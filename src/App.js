@@ -2,19 +2,29 @@
 
 import * as React from 'react'
 import './App.css'
+import { useState } from 'react';
 
 /**
  *
  * @type {React.FC}
  */
 export const App = () => {
+  const [ dogUrl , setDogUrl ] = useState("https://images.dog.ceo/breeds/shiba/shiba-16.jpg")
+
+  const handleUpdate = () => {
+    setDogUrl("https://images.dog.ceo/breeds/shiba/shiba-10.jpg");
+  };
+
   return (
     <div>
       <header>
         <h1>your WANKO</h1>
       </header>
-      <h2>犬の画像を表示するサイトです</h2>
-      <img src="https://dog.ceo/dog-api/"></img>
+      <h2>愛しいわんこを眺めるためのサイトです</h2>
+      <img src={dogUrl} alt="わんこの画像" /><br/>
+      <button type="button" onClick={handleUpdate}>
+        更新
+      </button>
     </div>
   )
 }
