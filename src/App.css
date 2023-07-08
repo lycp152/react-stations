@@ -1,0 +1,10 @@
+img {
+  height: 500px;
+}
+
+button {
+  font-size: medium;
+  padding: 0.2em 1.5em;
+  border-radius: 5px;
+  border: 1px solid;
+}
