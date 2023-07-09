@@ -1,16 +1,11 @@
 // DO NOT DELETE
-import * as React from 'react'
-import { useState } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 
-export const Description = () => {
-  const handleUpdate = () => {
-    fetch('https://dog.ceo/api/breeds/image/random')
-      .then(response => response.json())
-      .then(data => setDogUrl(data.message))
-      .catch(error => console.log(error));
-  };
-  const [dogUrl, setDogUrl] = useState('https://images.dog.ceo/breeds/shiba/shiba-16.jpg');
-  return (
-    <img src={dogUrl} alt="わんこの画像" />
-  );
+export const DogImage = ({ url }) => {
+  return <img src={url} alt="わんこの画像" />;
+};
+
+DogImage.propTypes = {
+  url: PropTypes.string.isRequired,
 };

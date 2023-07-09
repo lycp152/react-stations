@@ -1,6 +1,7 @@
 // DO NOT DELETE
 import * as React from 'react'
 import { useState } from 'react';
+import { DogImage } from './DogImage';
 
 export const Description = () => {
   const [dogUrl, setDogUrl] = useState('https://images.dog.ceo/breeds/shiba/shiba-16.jpg');
@@ -16,7 +17,7 @@ export const Description = () => {
     <div>
       <div id="flex">
         <h2>愛しいわんこを眺めるためのサイトです</h2>
-        <img src={dogUrl} alt="わんこの画像" /><br/>
+        <DogImage url={dogUrl} /><br/>
       </div>
       <button type="button" onClick={handleUpdate}>
           更新
