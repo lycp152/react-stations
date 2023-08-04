@@ -14,12 +14,10 @@ export const Description = () => {
   };
 
   return (
-    <div>
-      <div id="flex">
-        <h2>愛しいわんこを眺めるためのサイトです</h2>
-        <DogImage url={dogUrl} /><br/>
-      </div>
-      <button type="button" onClick={handleUpdate}>
+    <div id="flex">
+      <h2>愛しいわんこを眺めるためのサイトです</h2>
+      <DogImage url={dogUrl} />
+      <button type="button" onClick={handleUpdate} id="updateButton">
           更新
       </button>
     </div>
